@@ -17,8 +17,6 @@ class _PageDismissalTransition extends AnimatedWidget {
   /// for special case, last item was deleted
   final bool skipAnimation;
 
-  final bool transformHitTests;
-
   final Widget child;
 
   /// total animation process, 0 - 1
@@ -66,7 +64,6 @@ class _PageDismissalTransition extends AnimatedWidget {
     this.skipAnimation = true,
     required this.animation,
     required this.besideWidgetScale,
-    this.transformHitTests = true,
     required this.scrollDirection,
     required this.reverse,
     required this.child,
@@ -181,7 +178,6 @@ class _PageDismissalTransition extends AnimatedWidget {
       Offset offset = _fillGapOffsetAnimation.value;
       return FractionalTranslation(
         translation: offset,
-        transformHitTests: transformHitTests,
         child: ScaleTransition(
           scale: _fillGapScaleAnimation,
           child: child,
@@ -233,7 +229,6 @@ class _PageDismissalTransition extends AnimatedWidget {
         _currentSlideOutOffset.add(offset);
         return FractionalTranslation(
           translation: offset,
-          transformHitTests: transformHitTests,
           child: previousChild,
         );
       } else if (dismissalType is _DismissalTypeScaleOut) {

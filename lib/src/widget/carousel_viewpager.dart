@@ -153,8 +153,7 @@ class DismissibleCarouselViewPager extends StatefulWidget {
     this.besidePageScale = 0.8,
     this.dismissalConfig,
     this.onPagerCreated,
-  })
-      : assert(viewportFraction > 0 && viewportFraction <= 1),
+  })  : assert(viewportFraction > 0 && viewportFraction <= 1),
         super(key: key);
 
   @override
@@ -194,9 +193,8 @@ class _DismissibleCarouselViewPagerState
 
   @override
   void initState() {
-    _skipAC =
-        AnimationController(
-            duration: const Duration(milliseconds: 1), vsync: this);
+    _skipAC = AnimationController(
+        duration: const Duration(milliseconds: 1), vsync: this);
     _itemCount = _realItemCount;
     _currentIndex = widget.initialPage;
     _setUpController();
@@ -221,25 +219,24 @@ class _DismissibleCarouselViewPagerState
   }
 
   @override
-  Widget build(BuildContext context) =>
-      PageView.builder(
-          scrollDirection: widget.scrollDirection,
-          reverse: widget.reverse,
-          physics: widget.physics,
-          pageSnapping: widget.pageSnapping,
-          dragStartBehavior: widget.dragStartBehavior,
-          allowImplicitScrolling: widget.allowImplicitScrolling,
-          restorationId: widget.restorationId,
-          clipBehavior: widget.clipBehavior,
-          scrollBehavior: widget.scrollBehavior,
-          padEnds: widget.padEnds,
-          controller: _controller,
-          itemCount: _itemCount,
-          onPageChanged: (index) {
-            widget.onPageChanged?.call(index);
-            _currentIndex = index;
-          },
-          itemBuilder: (context, index) => _itemBuilder(index));
+  Widget build(BuildContext context) => PageView.builder(
+      scrollDirection: widget.scrollDirection,
+      reverse: widget.reverse,
+      physics: widget.physics,
+      pageSnapping: widget.pageSnapping,
+      dragStartBehavior: widget.dragStartBehavior,
+      allowImplicitScrolling: widget.allowImplicitScrolling,
+      restorationId: widget.restorationId,
+      clipBehavior: widget.clipBehavior,
+      scrollBehavior: widget.scrollBehavior,
+      padEnds: widget.padEnds,
+      controller: _controller,
+      itemCount: _itemCount,
+      onPageChanged: (index) {
+        widget.onPageChanged?.call(index);
+        _currentIndex = index;
+      },
+      itemBuilder: (context, index) => _itemBuilder(index));
 
   @override
   void didUpdateWidget(DismissibleCarouselViewPager oldWidget) {
@@ -294,8 +291,8 @@ class _DismissibleCarouselViewPagerState
     Key? contentKey = content.key != null ? ValueKey(content.key) : null;
 
     if (dismissalEnable) {
-      assert(content.key !=
-          null, "Dismissal effect not work! To enable dismissible, remember feed special [key] to your widget that created by [DismissibleCarouselViewPager.itemBuilder]!");
+      assert(content.key != null,
+          "Dismissal effect not work! To enable dismissible, remember feed special [key] to your widget that created by [DismissibleCarouselViewPager.itemBuilder]!");
       if (_shouldFindDeletedIndex) {
         if (preKey != null && content.key != null) {
           if (preKey != contentKey) {
@@ -341,16 +338,15 @@ class _DismissibleCarouselViewPagerState
     );
 
     if (dismissalEnable) {
-      Duration animationDuration =
-          _dismissalConfig.longestDismissalDuration +
-              _dismissalConfig.delayStartFillGap +
-              _dismissalConfig.fillGapDuration;
+      Duration animationDuration = _dismissalConfig.longestDismissalDuration +
+          _dismissalConfig.delayStartFillGap +
+          _dismissalConfig.fillGapDuration;
       child = AnimatedSwitcher(
         duration: animationDuration,
         layoutBuilder: _skipAnimation
             ? (currentChild, previousChildren) {
-          return currentChild ?? const SizedBox();
-        }
+                return currentChild ?? const SizedBox();
+              }
             : AnimatedSwitcher.defaultLayoutBuilder,
         transitionBuilder: (Widget child, Animation<double> animation) {
           Widget child1() {
@@ -391,22 +387,23 @@ class _DismissibleCarouselViewPagerState
               contentSize: _itemSize[index],
               pageSize: _pageSize!,
               onEnd:
-              _lastItemDeleted || (_skipAnimation && index == _currentIndex)
-                  ? () {
-                if (_lastItemDeleted) {
-                  _lastItemDeleted = false;
-                  WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-                    setState(() {
-                      _itemCount = widget.itemCount;
-                      _skipAnimation = true;
-                      _skipAC.forward(from: 0);
-                    });
-                  });
-                } else if (_skipAnimation && index == _currentIndex) {
-                  _skipAnimation = false;
-                }
-              }
-                  : null,
+                  _lastItemDeleted || (_skipAnimation && index == _currentIndex)
+                      ? () {
+                          if (_lastItemDeleted) {
+                            _lastItemDeleted = false;
+                            WidgetsBinding.instance
+                                .addPostFrameCallback((timeStamp) {
+                              setState(() {
+                                _itemCount = widget.itemCount;
+                                _skipAnimation = true;
+                                _skipAC.forward(from: 0);
+                              });
+                            });
+                          } else if (_skipAnimation && index == _currentIndex) {
+                            _skipAnimation = false;
+                          }
+                        }
+                      : null,
             );
           }
 
