@@ -1,0 +1,20 @@
+name: dismissible_carousel_viewpager
+description: This is a view pager provides carousel effect and dismissal animation when page was removed.
+version: 0.0.1-dev.1
+homepage: https://github.com/zyzdev/dismissible_carousel_viewpager
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
+
