@@ -17,7 +17,7 @@ This is a view pager provides carousel effect and dismissal animation when page 
 [](https://user-images.githubusercontent.com/16483162/188597974-54353bad-a813-4b17-8140-e328843bfa73.webm)
   
 ## Web Live demo
-This a example app of this plugin of web version.
+This an example app of this plugin of web version.
 
 https://zyzdev.github.io/dismissible_carousel_viewpager
 
