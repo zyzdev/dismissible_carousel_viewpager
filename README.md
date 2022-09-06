@@ -3,16 +3,18 @@ This is a view pager provides carousel effect and dismissal animation when page 
 ## Features
 
 * Carousel effect
-* 
-Horizontal | Vertical                                                                                                                                   
-:-: | :-: 
-<video src='https://user-images.githubusercontent.com/16483162/188594209-abc1b013-3bfc-426c-82f1-af1399042f52.webm' width=180/> | <video src='https://user-images.githubusercontent.com/16483162/188594162-0f078535-3bdd-439c-889b-ade695d4be93.webm' width=180/>
+
+[](https://user-images.githubusercontent.com/16483162/188594209-abc1b013-3bfc-426c-82f1-af1399042f52.webm) 
+
+[](https://user-images.githubusercontent.com/16483162/188594162-0f078535-3bdd-439c-889b-ade695d4be93.webm)
   
 * Dismissal animation
 
-Fade out & slide out | Fade out and scale | Fade out and circular hide
-:-: | :-: | :-:
-<video src='https://user-images.githubusercontent.com/16483162/188597772-72d4c06f-24b1-44f2-819e-d61a7c01e41f.webm' width=180/> | <video src='https://user-images.githubusercontent.com/16483162/188597902-4f68ded5-f7f3-4269-9749-e3c38e9b10e0.webm' width=180/> | <video src='https://user-images.githubusercontent.com/16483162/188597974-54353bad-a813-4b17-8140-e328843bfa73.webm' width=180/>
+[](https://user-images.githubusercontent.com/16483162/188597772-72d4c06f-24b1-44f2-819e-d61a7c01e41f.webm)
+
+[](https://user-images.githubusercontent.com/16483162/188597902-4f68ded5-f7f3-4269-9749-e3c38e9b10e0.webm)
+
+[](https://user-images.githubusercontent.com/16483162/188597974-54353bad-a813-4b17-8140-e328843bfa73.webm)
   
 ## Web Live demo
 This a example app of this plugin of web version.
