@@ -207,7 +207,7 @@ class _DismissibleCarouselViewPagerState
       keepPage: widget.keepPage,
       viewportFraction: widget.viewportFraction,
     );
-    SchedulerBinding.instance.addPostFrameCallback((timeStamp) {
+    SchedulerBinding.instance!.addPostFrameCallback((timeStamp) {
       widget.onPagerCreated?.call(_controller!);
     });
   }
@@ -391,7 +391,7 @@ class _DismissibleCarouselViewPagerState
                       ? () {
                           if (_lastItemDeleted) {
                             _lastItemDeleted = false;
-                            WidgetsBinding.instance
+                            WidgetsBinding.instance!
                                 .addPostFrameCallback((timeStamp) {
                               setState(() {
                                 _itemCount = widget.itemCount;
@@ -437,7 +437,7 @@ class _SizeProviderWidgetState extends State<_SizeProviderWidget> {
   }
 
   void _onResize() {
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+    WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
       if (mounted) {
         if (context.size is Size) {
           widget.onChildSize(context.size!);
