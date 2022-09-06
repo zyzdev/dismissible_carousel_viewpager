@@ -1,3 +1,7 @@
+## 0.0.3
+
+* update README
+
 ## 0.0.2
 
 * set flutter version >= 3.0.0

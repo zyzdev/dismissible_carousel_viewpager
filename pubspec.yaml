@@ -1,6 +1,6 @@
 name: dismissible_carousel_viewpager
 description: This is a view pager provides carousel effect and dismissal animation when page was removed.
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/zyzdev/dismissible_carousel_viewpager
 
 environment:
