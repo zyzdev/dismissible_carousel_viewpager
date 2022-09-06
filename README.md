@@ -3,17 +3,17 @@ This is a view pager provides carousel effect and dismissal animation when page 
 ## Features
 
 * Carousel effect
-
-| Horizontal                                                                                                                                                    | Vertical                                                                                                                                                    |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <img title="base_usage_horizontal" src="https://user-images.githubusercontent.com/16483162/188320379-bae6cd27-a817-4962-9c16-f67f28770b77.gif" width="300" /> | <img title="base_usage_vertical"  src="https://user-images.githubusercontent.com/16483162/188320384-18598ce1-8661-4960-be2d-a9be8171880c.gif" width="300"/> |
-
+* 
+Horizontal | Vertical                                                                                                                                   
+:-: | :-: 
+<video src='https://user-images.githubusercontent.com/16483162/188594209-abc1b013-3bfc-426c-82f1-af1399042f52.webm' width=180/> | <video src='https://user-images.githubusercontent.com/16483162/188594162-0f078535-3bdd-439c-889b-ade695d4be93.webm' width=180/>
+  
 * Dismissal animation
 
-| Fade out & slide out                                                                                                                                             | Fade out and scale                                                                                                                                          | Fade out and circular hide                                                                                                                                           |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <img title="dismissal_fade_slide_out" src="https://user-images.githubusercontent.com/16483162/188320390-4046c544-0edb-428b-a97e-321f6a411d14.gif" width="300" /> | <img title="dismissal_fade_scale" src="https://user-images.githubusercontent.com/16483162/188320395-d26295c2-5882-4437-a5c1-ba1172acedb2.gif" width="300"/> | <img title="dismissal_fade_circular_hide"  src="https://user-images.githubusercontent.com/16483162/188320396-d3a73621-d346-40e9-aaba-b093cd2029ca.gif" width="300"/> |
-
+Fade out & slide out | Fade out and scale | Fade out and circular hide
+:-: | :-: | :-:
+<video src='https://user-images.githubusercontent.com/16483162/188597772-72d4c06f-24b1-44f2-819e-d61a7c01e41f.webm' width=180/> | <video src='https://user-images.githubusercontent.com/16483162/188597902-4f68ded5-f7f3-4269-9749-e3c38e9b10e0.webm' width=180/> | <video src='https://user-images.githubusercontent.com/16483162/188597974-54353bad-a813-4b17-8140-e328843bfa73.webm' width=180/>
+  
 ## Web Live demo
 This a example app of this plugin of web version.
 
