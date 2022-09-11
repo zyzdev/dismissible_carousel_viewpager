@@ -10,7 +10,7 @@ This is a view pager provides carousel effect and dismissal animation when page 
 
 * Dismissal animation
 
-| Fade out & slide out                                                                                                                                             | Fade out and scale                                                                                                                                          | Fade out and circular hide                                                                                                                                           |
+| Fade out & slide out                                                                                                                                             | Fade out & scale                                                                                                                                          | Fade out & circular hide                                                                                                                                           |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <img title="dismissal_fade_slide_out" src="https://user-images.githubusercontent.com/16483162/188320390-4046c544-0edb-428b-a97e-321f6a411d14.gif" width="300" /> | <img title="dismissal_fade_scale" src="https://user-images.githubusercontent.com/16483162/188320395-d26295c2-5882-4437-a5c1-ba1172acedb2.gif" width="300"/> | <img title="dismissal_fade_circular_hide"  src="https://user-images.githubusercontent.com/16483162/188320396-d3a73621-d346-40e9-aaba-b093cd2029ca.gif" width="300"/> |
 
@@ -47,7 +47,7 @@ More detail please run demo `Dismissal Usage` at `/example` app.
 
 `dismissible_carousel_viewpager` provides several kind of animation(`fade out`, `slide out`, `scale` and `circular hide`) to make dismissal animation.
 
-You can combine then to make your own style of dismissal animation.
+You can combine them to make your own style of dismissal animation.
 
 
 #### *Note*
@@ -57,7 +57,9 @@ Remember add `key` to the page widget that created by `DismissibleCarouselViewPa
 
 I recommend using the `data` that preparing to create page widget to create `Key("$data")`, `ValueKey(data)` or `ObjectKey(data)` for the page widget.
 
+####*example:*
 ```dart
+
 late final List<int> _item = List.generate(1000, (index) => index);
 
 DismissibleCarouselViewPager(
