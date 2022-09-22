@@ -1,7 +1,3 @@
-## 0.0.6-dev.2
-
-* update README
-
 ## 0.0.5
 
 * update README
