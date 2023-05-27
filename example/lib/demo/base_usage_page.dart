@@ -43,22 +43,7 @@ class _BaseUsagePageState extends State<BaseUsagePage> {
     );
   }
 
-  Widget get _viewPager =>
-      DismissibleCarouselViewPager(
-        viewportFraction: 0.5,
-        besidePageScale: 0.8,
-        itemBuilder: (context, index) {
-          return Container(
-            alignment: Alignment.center,
-            color: index.isEven
-                ? Colors.blueAccent.withOpacity(0.1)
-                : Colors.deepPurpleAccent.withOpacity(0.1),
-            child: Text("Item:$index"),
-          );
-        },
-        itemCount: 100,
-      );
-/*      DismissibleCarouselViewPager(
+  Widget get _viewPager => DismissibleCarouselViewPager(
         /// width of selected page is half of screen width
         viewportFraction: _viewportFraction,
 
@@ -88,7 +73,7 @@ class _BaseUsagePageState extends State<BaseUsagePage> {
           child: Text("Item:${_item[index]}"),
         ),
         itemCount: _item.length,
-      );*/
+      );
 
   Widget get _options => ColoredBox(
         color: Colors.blueGrey.withOpacity(0.1),
@@ -103,29 +88,29 @@ class _BaseUsagePageState extends State<BaseUsagePage> {
       );
 
   Widget _reverseOption() => Row(
-    children: [
-      Checkbox(
-          value: _reverse,
-          onChanged: (_reverse) {
-            setState(() {
-              _reverse = _reverse!;
-            });
-          }),
-      InkWell(
-        onTap: () {
-          setState(() {
-            _reverse = !_reverse;
-          });
-        },
-        child: Text(
-          "Reverse",
-          style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: _reverse ? Colors.green : Colors.red),
-        ),
-      ),
-    ],
-  );
+        children: [
+          Checkbox(
+              value: _reverse,
+              onChanged: (_reverse) {
+                setState(() {
+                  _reverse = _reverse!;
+                });
+              }),
+          InkWell(
+            onTap: () {
+              setState(() {
+                _reverse = !_reverse;
+              });
+            },
+            child: Text(
+              "Reverse",
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: _reverse ? Colors.green : Colors.red),
+            ),
+          ),
+        ],
+      );
 
   Widget _viewportFractionOption() {
     return Column(
@@ -138,7 +123,7 @@ class _BaseUsagePageState extends State<BaseUsagePage> {
               "Viewport Fraction:$_viewportFraction",
               style: Theme.of(context)
                   .textTheme
-                  .subtitle1!
+                  .titleMedium!
                   .copyWith(fontWeight: FontWeight.bold),
             )
           ],
@@ -173,7 +158,7 @@ class _BaseUsagePageState extends State<BaseUsagePage> {
               "Beside Page Scale:$_besidePageScale",
               style: Theme.of(context)
                   .textTheme
-                  .subtitle1!
+                  .titleMedium!
                   .copyWith(fontWeight: FontWeight.bold),
             )
           ],
@@ -208,7 +193,7 @@ class _BaseUsagePageState extends State<BaseUsagePage> {
               "Scroll Direction:${_scrollDirection.name}",
               style: Theme.of(context)
                   .textTheme
-                  .subtitle1!
+                  .titleMedium!
                   .copyWith(fontWeight: FontWeight.bold),
             )
           ],

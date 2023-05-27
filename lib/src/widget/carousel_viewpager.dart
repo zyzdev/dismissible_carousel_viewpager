@@ -132,7 +132,7 @@ class DismissibleCarouselViewPager extends StatefulWidget {
   /// it worked when page removed
   final DismissalConfig? dismissalConfig;
 
-  DismissibleCarouselViewPager({
+  const DismissibleCarouselViewPager({
     Key? key,
     this.scrollDirection = Axis.horizontal,
     this.reverse = false,
